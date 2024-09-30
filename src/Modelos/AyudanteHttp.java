@@ -20,8 +20,6 @@ public class AyudanteHttp {
                     .build();
             HttpResponse<String> response = client
                     .send(request, HttpResponse.BodyHandlers.ofString());
-
-            System.out.println(response.body());
             return response.body();
         }catch(IOException | InterruptedException e){
             System.out.println("Hubo un error de conexion");

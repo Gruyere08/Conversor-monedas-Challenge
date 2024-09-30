@@ -4,6 +4,9 @@ import java.lang.reflect.Field;
 
 public class ConversorDeMonedas {
     public static double convertirMoneda(String monedaInicial, String monedaFinal, double monto){
+        String direccion = "https://v6.exchangerate-api.com/v6/a9aeaee58a78bcadcb370047/latest/" + monedaInicial.toUpperCase();
+        TablaDeConversion tabla = AyudanteHttp.pedirTabla(direccion);
+        System.out.println(tabla);
         return 0;
     }
 
