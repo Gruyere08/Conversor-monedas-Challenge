@@ -3,22 +3,28 @@ package Modelos;
 import java.lang.reflect.Field;
 
 public class ConversorDeMonedas {
-    public static double convertirMoneda(String monedaInicial, String monedaFinal, double monto) throws NoSuchFieldException, IllegalAccessException {
+    public static double convertirMoneda(String monedaInicial, String monedaFinal, double monto) {
         String direccion = "https://v6.exchangerate-api.com/v6/a9aeaee58a78bcadcb370047/latest/" + monedaInicial.toUpperCase();
         TablaDeConversion tabla = AyudanteHttp.pedirTabla(direccion);
-        double multiplicador = obtenerValorCampo(tabla , monedaFinal);
+        double multiplicador = obtenerValorCampo(tabla , monedaFinal.toLowerCase());
         System.out.println("Tabla:" + tabla);
         System.out.println("Multiplicador: " + multiplicador);
-        return 0;
+        return monto * multiplicador;
     }
 
 
 
-    private static double obtenerValorCampo(TablaDeConversion tablaDeConversion, String nombreCampo)
-            throws NoSuchFieldException, IllegalAccessException {
+    private static double obtenerValorCampo(TablaDeConversion tablaDeConversion, String nombreCampo) {
         Class<?> recordClass = tablaDeConversion.getClass();
-        Field field = recordClass.getDeclaredField(nombreCampo);
-        field.setAccessible(true);
-        return (double) field.get(tablaDeConversion);
+        Field field;
+        try {
+            field = recordClass.getDeclaredField(nombreCampo);
+            field.setAccessible(true);
+            return (double) field.get(tablaDeConversion);
+        } catch (NoSuchFieldException | IllegalAccessException e) {
+            System.out.println("Ocurrio un error inesperado");
+            return -1;
+        }
+
     }
 }

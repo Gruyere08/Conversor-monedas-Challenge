@@ -1,8 +1,5 @@
-import Modelos.AyudanteHttp;
 import Modelos.ConversorDeMonedas;
 import Modelos.SelectorDePais;
-import Modelos.TablaDeConversion;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -10,9 +7,9 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner teclado = new Scanner(System.in);
-        String monedaInicial = "";
-        String monedaFinal = "";
-        double monto = 0;
+        String monedaInicial;
+        String monedaFinal;
+        double monto;
 
 
         System.out.println("###########Conversor de monedas###########");
@@ -24,14 +21,14 @@ public class Main {
                 5. Peso Colombiano
                 6. Dolar EstadoUnidense
                 7. salir
-                Tu opcion: """;
+                Tu opcion:""";
 
 
         //Ciclo operativo de la moneda inicial
         while(true){
             System.out.println("Especifique la moneda que desea ingresar");
             System.out.println(menu);
-            int opcion = 0;
+            int opcion;
             try{
                 opcion = teclado.nextInt();
                 if (opcion == 7){
@@ -81,9 +78,10 @@ public class Main {
 
         //Ciclo operativo del monto final
         while(true){
+            System.out.println("######################################################");
             System.out.println("Especifique a que moneda desea convertir el monto");
             System.out.println(menu);
-            int opcion = 0;
+            int opcion;
             try{
                 opcion = teclado.nextInt();
                 if (opcion == 7){
@@ -107,6 +105,9 @@ public class Main {
 
         }
 
+
+
+        System.out.println("######################################################");
         System.out.println("Moneda Inicial: " + monedaInicial);
         System.out.println("Moneda Final: " + monedaFinal);
         System.out.println("Monto: " + monto);
@@ -115,14 +116,11 @@ public class Main {
 
 
 
-//        try {
-//            ConversorDeMonedas.convertirMoneda(monedaInicial,monedaFinal,monto);
-//        } catch (NoSuchFieldException e) {
-//            throw new RuntimeException(e);
-//        } catch (IllegalAccessException e) {
-//            throw new RuntimeException(e);
-//        }
 
-        //TablaDeConversion tablaDeConversion = AyudanteHttp.pedirTabla("https://v6.exchangerate-api.com/v6/a9aeaee58a78bcadcb370047/latest/USD");
+        double resultado = ConversorDeMonedas.convertirMoneda(monedaInicial,monedaFinal,monto);
+        System.out.println("Resultado: " + resultado);
+
+
+
     }
 }
