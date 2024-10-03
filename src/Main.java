@@ -108,17 +108,10 @@ public class Main {
 
 
         System.out.println("######################################################");
-        System.out.println("Moneda Inicial: " + monedaInicial);
-        System.out.println("Moneda Final: " + monedaFinal);
-        System.out.println("Monto: " + monto);
-
-
-
-
-
+        System.out.println(SelectorDePais.obtenerNombre(monedaInicial) + " --> " + SelectorDePais.obtenerNombre(monedaFinal));
 
         double resultado = ConversorDeMonedas.convertirMoneda(monedaInicial,monedaFinal,monto);
-        System.out.println("Resultado: " + resultado);
+        System.out.println(monto + " " + SelectorDePais.obtenerNombre(monedaInicial) + " equivalen a " + resultado + " " + SelectorDePais.obtenerNombre(monedaFinal));
 
 
 

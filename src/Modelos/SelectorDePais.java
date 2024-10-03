@@ -19,4 +19,25 @@ public class SelectorDePais {
                 return "XXX";
         }
     }
+
+
+
+    public static String obtenerNombre(String codigoPais){
+        switch (codigoPais){
+            case "ARS":
+                return "Pesos argentinos";
+            case "BOB":
+                return "Bolivianos";
+            case "BRL":
+                return "Reales brasileños";
+            case "CLP":
+                return "Pesos chilenos";
+            case "COP":
+                return "Pesos colombianos";
+            case "USD":
+                return "Dolares Estadounidenses";
+            default:
+                return "Moneda desconocida";
+        }
+    }
 }
