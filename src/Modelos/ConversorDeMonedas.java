@@ -7,6 +7,7 @@ public class ConversorDeMonedas {
         String direccion = "https://v6.exchangerate-api.com/v6/a9aeaee58a78bcadcb370047/latest/" + monedaInicial.toUpperCase();
         TablaDeConversion tabla = AyudanteHttp.pedirTabla(direccion);
         double multiplicador = obtenerValorCampo(tabla , monedaFinal.toLowerCase());
+        AyudanteHistorial.registrar(monedaInicial , monedaFinal , monto ,monto * multiplicador);
         return monto * multiplicador;
     }
 

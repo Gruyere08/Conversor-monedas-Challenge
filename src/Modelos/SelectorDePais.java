@@ -2,42 +2,28 @@ package Modelos;
 
 public class SelectorDePais {
     public static String obtenerPais(int numeroDeOpcion){
-        switch (numeroDeOpcion){
-            case 1:
-                return "ARS";
-            case 2:
-                return "BOB";
-            case 3:
-                return "BRL";
-            case 4:
-                return "CLP";
-            case 5:
-                return "COP";
-            case 6:
-                return "USD";
-            default:
-                return "XXX";
-        }
+        return switch (numeroDeOpcion) {
+            case 1 -> "ARS";
+            case 2 -> "BOB";
+            case 3 -> "BRL";
+            case 4 -> "CLP";
+            case 5 -> "COP";
+            case 6 -> "USD";
+            default -> "XXX";
+        };
     }
 
 
 
     public static String obtenerNombre(String codigoPais){
-        switch (codigoPais){
-            case "ARS":
-                return "Pesos argentinos";
-            case "BOB":
-                return "Bolivianos";
-            case "BRL":
-                return "Reales brasileños";
-            case "CLP":
-                return "Pesos chilenos";
-            case "COP":
-                return "Pesos colombianos";
-            case "USD":
-                return "Dolares Estadounidenses";
-            default:
-                return "Moneda desconocida";
-        }
+        return switch (codigoPais) {
+            case "ARS" -> "Pesos argentinos";
+            case "BOB" -> "Bolivianos";
+            case "BRL" -> "Reales brasileños";
+            case "CLP" -> "Pesos chilenos";
+            case "COP" -> "Pesos colombianos";
+            case "USD" -> "Dolares Estadounidenses";
+            default -> "Moneda desconocida";
+        };
     }
 }
