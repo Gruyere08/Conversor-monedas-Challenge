@@ -8,5 +8,11 @@ Modo de uso:
 2. Luego de seleccionar la moneda inicial aparecerá una pantalla que solicitará ingresar el monto a convertir, aquí el usuario deberá ingresar el monto usando puntos para separar los decimales.
 ![Screenshot 2024-10-03 220420](https://github.com/user-attachments/assets/b683f61c-7962-4f55-a5e3-a0575cfd2a72)
 
-3. 
+3. Por ultimo se le solicitará que especifique la moneda a la que desea convertir el monto, el usuario deberá ingresar el numero de la opción que desee al igual que lo hizo previamente.
+![Screenshot 2024-10-04 105634](https://github.com/user-attachments/assets/b79e9fe9-780d-4e19-b67b-3764aa13e48a)
 
+4. Luego de ingresar los datos necesarios, el sistema convertirá las monedas usando tasas actualizadas, y especificando la equivalencia. Si se desea continuar usando la aplicación solo tiene que ingresar 1 como dice el prompt de abajo.
+![Screenshot 2024-10-04 105820](https://github.com/user-attachments/assets/6fb044a2-db6f-4d98-af75-d532ce9b16b6)
+
+
+<em> # Revisando el historial </em>
