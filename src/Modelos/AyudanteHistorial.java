@@ -8,7 +8,7 @@ import java.time.format.DateTimeFormatter;
 
 public class AyudanteHistorial {
 
-    public static void registrar(String monedaInicial, String monedaFinal, double monto, double resultado){
+    public static void registrar(String monedaInicial, String monedaFinal, double monto, double resultado) {
         try (FileWriter writer = new FileWriter("Historial.txt", true)) {
 
             LocalDateTime tiempoActual = LocalDateTime.now();
@@ -23,7 +23,7 @@ public class AyudanteHistorial {
             writer.write("\n");
 
         } catch (IOException e) {
-            System.out.println("No se pudo escribir en el historial");;
+            System.out.println("No se pudo escribir en el historial");
         }
     }
 }

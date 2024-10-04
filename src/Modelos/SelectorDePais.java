@@ -1,7 +1,7 @@
 package Modelos;
 
 public class SelectorDePais {
-    public static String obtenerPais(int numeroDeOpcion){
+    public static String obtenerPais(int numeroDeOpcion) {
         return switch (numeroDeOpcion) {
             case 1 -> "ARS";
             case 2 -> "BOB";
@@ -14,8 +14,7 @@ public class SelectorDePais {
     }
 
 
-
-    public static String obtenerNombre(String codigoPais){
+    public static String obtenerNombre(String codigoPais) {
         return switch (codigoPais) {
             case "ARS" -> "Pesos argentinos";
             case "BOB" -> "Bolivianos";

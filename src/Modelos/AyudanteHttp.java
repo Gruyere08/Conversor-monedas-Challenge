@@ -12,8 +12,8 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 public class AyudanteHttp {
-    private static String manejarRequest(String direccion){
-        try{
+    private static String manejarRequest(String direccion) {
+        try {
             HttpClient client = HttpClient.newHttpClient();
             HttpRequest request = HttpRequest.newBuilder()
                     .uri(URI.create(direccion))
@@ -21,14 +21,14 @@ public class AyudanteHttp {
             HttpResponse<String> response = client
                     .send(request, HttpResponse.BodyHandlers.ofString());
             return response.body();
-        }catch(IOException | InterruptedException e){
+        } catch (IOException | InterruptedException e) {
             System.out.println("Hubo un error de conexion");
             return "";
         }
 
     }
 
-    public static TablaDeConversion pedirTabla(String direccion){
+    public static TablaDeConversion pedirTabla(String direccion) {
         JsonObject jsonObject = JsonParser.parseString(manejarRequest(direccion)).getAsJsonObject();
         jsonObject = jsonObject.getAsJsonObject("conversion_rates");
         Gson gson = new GsonBuilder().setFieldNamingStrategy(new EstrategiaMayuscula()).create();
