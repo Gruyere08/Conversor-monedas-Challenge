@@ -6,6 +6,7 @@ autor: Escalante Thiago
 Este repositorio pertenece a un proyecto que forma parte del programa Oracle Next Education. El proyecto consiste en un conversor de monedas dessarrollado en lenguaje java como parte de un desafio para Alura Latam. Utiliza la API "exchangerate-api" para realizar conversiones precisas y al cambio actual entre 6 tipos de monedas distintos.
 
 <h2> Teconologías utilizadas </h2>
+
 * Java
 * IntelliJ
 * API: "www.exchangerate-api.com"
