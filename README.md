@@ -3,7 +3,7 @@ autor: Escalante Thiago
 
 
 <h2> Descripción </h2>
-Este repositorio pertenece a un proyecto que forma parte del programa Oracle Next Education. El proyecto consiste en un conversor de monedas dessarrollado en lenguaje java como parte de un desafio para Alura Latam.
+Este repositorio pertenece a un proyecto que forma parte del programa Oracle Next Education. El proyecto consiste en un conversor de monedas dessarrollado en lenguaje java como parte de un desafio para Alura Latam. Utiliza la API "exchangerate-api" para realizar conversiones precisas y al cambio actual entre 6 tipos de monedas distintos.
 
 <h2> Monedas soportadas </h2>
 
